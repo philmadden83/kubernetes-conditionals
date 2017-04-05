@@ -52,7 +52,6 @@ public class PodStatusCondition extends RunCondition {
                     .envs(environment)
                     .stderr(buildListener.getLogger())
                     .stdout(pipedOutputStream)
-                    .pwd(abstractBuild.getWorkspace())
                     .quiet(true)
                     .join();
 
@@ -70,7 +69,7 @@ public class PodStatusCondition extends RunCondition {
             }
 
         } catch (IOException e) {
-            buildListener.getLogger().append(e.getMessage());
+            buildListener.getLogger().append(e.getMessage() + "\n");
         }
         return false;
     }
