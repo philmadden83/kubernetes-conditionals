@@ -1,0 +1,15 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+
+    <f:entry title="Pod Name" field="podName">
+         <f:textbox />
+    </f:entry>
+    <f:entry title="Namespace" field="namespace">
+         <f:textbox />
+    </f:entry>
+
+    <f:entry title="Status" field="podStatus">
+        <f:select/>
+    </f:entry>
+
+</j:jelly>
